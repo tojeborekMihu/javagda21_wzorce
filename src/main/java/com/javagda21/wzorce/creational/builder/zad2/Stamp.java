@@ -4,6 +4,16 @@ public class Stamp {
     private int firstDayNumber, secondDayNumber, firstMonthNumber, secondMonthNumer, yearNumber1, yearNumber2, yearNumber3, yearNumber4;
     private int caseNumber;
 
+    @Override
+    public String toString() {
+        return firstDayNumber + secondDayNumber +
+                "-"+
+                + firstMonthNumber + secondMonthNumer + "-"+
+                + yearNumber1 + yearNumber2 +  yearNumber3 + yearNumber4 + ":"+
+                + caseNumber
+                ;
+    }
+
     public Stamp(int firstDayNumber, int secondDayNumber, int firstMonthNumber, int secondMonthNumer, int yearNumber1, int yearNumber2, int yearNumber3, int yearNumber4, int caseNumber) {
         this.firstDayNumber = firstDayNumber;
         this.secondDayNumber = secondDayNumber;
@@ -15,6 +25,7 @@ public class Stamp {
         this.yearNumber4 = yearNumber4;
         this.caseNumber = caseNumber;
     }
+
     public static class Builder{
 
         private int firstDayNumber;
